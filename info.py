@@ -40,14 +40,14 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 # if REQUEST_TO_JOIN_MODE is true then force subscribe work like request to join fsub, else if false then work like normal fsub.
 REQUEST_TO_JOIN_MODE = bool(environ.get('REQUEST_TO_JOIN_MODE', True)) # Set True Or False
 TRY_AGAIN_BTN = bool(environ.get('TRY_AGAIN_BTN', False)) # Set True Or False (This try again button is only for request to join fsub not for normal fsub)
-auth_channel = environ.get('AUTH_CHANNEL', '-1002021738886') # give your force subscribe channel id here else leave it blank
+auth_channel = environ.get('AUTH_CHANNEL', '-1002437928724') # give your force subscribe channel id here else leave it blank
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 reqst_channel = environ.get('REQST_CHANNEL_ID', '')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '')
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '6089707609')
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1002353416792')).split()]
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 
 # MongoDB information
@@ -66,14 +66,14 @@ PAYMENT_TEXT = environ.get('PAYMENT_TEXT', '<b>- ᴀᴠᴀɪʟᴀʙʟᴇ ᴘʟ�
 OWNER_USERNAME = environ.get('OWNER_USERNAME', 'Rishu1286') # owner username without @
 
 # Clone Information : If Clone Mode Is True Then Bot Clone Other Bots.
-CLONE_MODE = bool(environ.get('CLONE_MODE', False)) # Set True or False
+CLONE_MODE = bool(environ.get('CLONE_MODE', True)) # Set True or False
 CLONE_DATABASE_URI = environ.get('CLONE_DATABASE_URI', "mongodb+srv://Rishu:rishu1@cluster0.szfcmic.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # Necessary If clone mode is true
 PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', 'Rishu_mood') # Public Channel Username Without @ or without https://t.me/ and Bot Is Admin With Full Right.
 
 # Links
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/ur_support07')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/ur_rishu_143')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/How_To_Open_Linkl')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/RefarXGroup')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+PVCPeb7RJhkxMjNl')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/+PVCPeb7RJhkxMjNl')
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Ur_support07') # Support Chat Link Without https:// or @
 
 # True Or False
@@ -147,7 +147,7 @@ URL = environ.get("URL", "https://testofvjfilter-1fa60b1b8498.herokuapp.com/")
 
 
 # Rename Info : If True Then Bot Rename File Else Not
-RENAME_MODE = bool(environ.get('RENAME_MODE', False)) # Set True or False
+RENAME_MODE = bool(environ.get('RENAME_MODE', True)) # Set True or False
 
 # Auto Approve Info : If True Then Bot Approve New Upcoming Join Request Else Not
 AUTO_APPROVE_MODE = bool(environ.get('AUTO_APPROVE_MODE', False)) # Set True or False
